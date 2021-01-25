@@ -12,6 +12,13 @@ struct ContentView: View {
     let images = ["lilacs", "lake", "rock"]
     @State private var selectedImage = ""
     
+    @ObservedObject private var imageDetectionVM: ImageDetectionViewModel
+    private var imageDetectionMagaer: ImageDetectionManager
+    init(){
+        self.imageDetectionMagaer = ImageDetectionManager()
+        self.imageDetectionVM = ImageDetectionViewModel(manager: self.imageDetectionMagaer)
+    }
+    
     var body: some View {
         NavigationView{
             VStack {
@@ -32,12 +39,12 @@ struct ContentView: View {
                 }
                 
                 Button("Detected") {
-                    
+                    self.imageDetectionVM.detect(self.selectedImage)
                 }.padding()
                 .background(Color.orange)
                 .foregroundColor(.white)
                 .cornerRadius(15)
-                Text("CoreML Detection")
+                Text(self.imageDetectionVM.predictionLabel)
             }
             .navigationTitle("CoreML")
         }
