@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let images = ["lilacs", "lake", "rock"]
+    var images = ["lilacs", "lake", "rock"]
+    
     @State private var selectedImage = ""
     
     @ObservedObject private var imageDetectionVM: ImageDetectionViewModel
@@ -20,37 +21,36 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView{
-            VStack {
-                Text("Select Image")
-                ScrollView([.horizontal]) {
-                    HStack {
-                        ForEach(self.images, id: \.self) {
-                            name in
-                            Image(name)
-                                .resizable()
-                                .frame(width: 300, height: 300)
-                                .padding()
-                                .onTapGesture {
-                                    self.selectedImage = name
-                                }.border(Color.black, width: self.selectedImage == name ? 10 : 0)
-                        }
-                        
+        NavigationView {
+        VStack {
+            ScrollView([.horizontal]){
+                HStack {
+                    ForEach(self.images, id: \.self) { name in
+                        Image(name)
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                            .padding()
+                            .onTapGesture {
+                                self.selectedImage = name
+                            }.border(Color.black, width: self.selectedImage == name ? 10 : 0)
                     }
                 }
-                
-                Button("Detected") {
-                    self.imageDetectionVM.detect(self.selectedImage)
-                }.padding()
-                .background(Color.orange)
-                .foregroundColor(.white)
-                .cornerRadius(15)
-                Text(self.imageDetectionVM.predictionLabel)
             }
-            .navigationTitle("CoreML")
+            Button("Detected") {
+                self.imageDetectionVM.detect(self.selectedImage)
+            }.padding()
+            .background(Color.orange)
+            .foregroundColor(.white)
+            .cornerRadius(15)
+            Text(self.imageDetectionVM.predictionLabel)
         }
+        .navigationBarTitle("Core ML")
     }
+    }
+ 
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

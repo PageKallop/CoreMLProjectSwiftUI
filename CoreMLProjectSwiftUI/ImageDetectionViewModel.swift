@@ -11,7 +11,7 @@ import Combine
 
 class ImageDetectionViewModel: ObservableObject {
     
-    var name: String = ""
+     var name: String = ""
     
     var manager: ImageDetectionManager
     
@@ -25,13 +25,12 @@ class ImageDetectionViewModel: ObservableObject {
         
         let sourceImage = UIImage(named: name)
         
-        guard let resizedImage = sourceImage?.resizeImage(targetSize: CGSize(width: 224, height: 224))
-        else {
-            fatalError("Unable to resize")
+        guard let resizedImage = sourceImage?.resizeImage(targetSize: CGSize(width: 224, height: 224)) else {
+            fatalError()
         }
        
           var label = self.manager.detect(resizedImage)
-        self.predictionLabel = label
+          self.predictionLabel = label
            
     
     }
