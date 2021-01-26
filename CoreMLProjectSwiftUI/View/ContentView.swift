@@ -22,6 +22,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
+                Text("Select Image")
                 ScrollView([.horizontal]) {
                     HStack {
                         ForEach(self.images, id: \.self) {

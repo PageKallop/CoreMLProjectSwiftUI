@@ -17,6 +17,8 @@
 		C01C779825BF559B00C38233 /* ImageDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C779725BF559B00C38233 /* ImageDetectionManager.swift */; };
 		C01C779B25BF594500C38233 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C01C779A25BF594500C38233 /* Resnet50.mlmodel */; };
 		C01C779E25BF59BA00C38233 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C779D25BF59BA00C38233 /* UIImage+Extensions.swift */; };
+		C0B04E9C25C079EF0024DA6A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B04E9B25C079EF0024DA6A /* CameraView.swift */; };
+		C0B04E9F25C07B0C0024DA6A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B04E9E25C07B0C0024DA6A /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C01C779725BF559B00C38233 /* ImageDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectionManager.swift; sourceTree = "<group>"; };
 		C01C779A25BF594500C38233 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		C01C779D25BF59BA00C38233 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		C0B04E9B25C079EF0024DA6A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		C0B04E9E25C07B0C0024DA6A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				C01C777D25BF4E8200C38233 /* AppDelegate.swift */,
 				C01C779D25BF59BA00C38233 /* UIImage+Extensions.swift */,
 				C01C779425BF543F00C38233 /* ImageDetectionViewModel.swift */,
+				C0B04E9E25C07B0C0024DA6A /* ImagePicker.swift */,
+				C0B04E9B25C079EF0024DA6A /* CameraView.swift */,
 				C01C779725BF559B00C38233 /* ImageDetectionManager.swift */,
 				C01C777F25BF4E8200C38233 /* SceneDelegate.swift */,
 				C01C779225BF4F6500C38233 /* View */,
@@ -168,10 +174,12 @@
 				C01C777E25BF4E8200C38233 /* AppDelegate.swift in Sources */,
 				C01C778025BF4E8200C38233 /* SceneDelegate.swift in Sources */,
 				C01C779825BF559B00C38233 /* ImageDetectionManager.swift in Sources */,
+				C0B04E9F25C07B0C0024DA6A /* ImagePicker.swift in Sources */,
 				C01C779E25BF59BA00C38233 /* UIImage+Extensions.swift in Sources */,
 				C01C779525BF543F00C38233 /* ImageDetectionViewModel.swift in Sources */,
 				C01C779B25BF594500C38233 /* Resnet50.mlmodel in Sources */,
 				C01C778225BF4E8200C38233 /* ContentView.swift in Sources */,
+				C0B04E9C25C079EF0024DA6A /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
